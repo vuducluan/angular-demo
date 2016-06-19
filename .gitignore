@@ -27,5 +27,6 @@ config/environments/*.local.yml
 /app/assets/javascripts/i18n/translations.js
 /config/settings/production.yml
 /doc/*
-/log/development.log
+/log/*
 /tmp/pids/server.pid
+/db/development.sqlite3
