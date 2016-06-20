@@ -1,9 +1,9 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', ['ngRoute'])
+var myApp = angular.module('myApp', ['ngRoute', 'ngResource']);
  
-.config(['$routeProvider', function($routeProvider) {
+myApp.config(['$routeProvider', function($routeProvider) {
  
     $routeProvider.otherwise({redirectTo: '/home'});
  
@@ -12,7 +12,8 @@ angular.module('myApp', ['ngRoute'])
     });
     
     $routeProvider.when('/projects', {
-        templateUrl: '/assets/projects.html'
+        templateUrl: '/assets/projects.html',
+        controller: 'UsersCtrl'
     });
     
     $routeProvider.when('/services', {
